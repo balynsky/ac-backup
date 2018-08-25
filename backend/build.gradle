@@ -1,0 +1,12 @@
+subprojects {
+    version = '1.0'
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        bootGradlePlugin = '2.0.3.RELEASE'
+    }
+}
