@@ -12,13 +12,14 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 bootJar {
-    baseName = 'ac-backup-service'
+    baseName = 'ac-storage'
 }
 
 dependencies {
-    compile project(":backend:user-client")
-    compile project(":backend:storage-client")
+    compile project(":backend:storage-model")
 
+    compile("com.h2database:h2")
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
     testCompile("junit:junit")
 }

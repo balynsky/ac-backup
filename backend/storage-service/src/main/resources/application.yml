@@ -1,0 +1,14 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+meth-storage:
+  datasource:
+    jdbcUrl: jdbc:h2:mem:souldb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+server:
+  port: 9082

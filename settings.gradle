@@ -1,8 +1,14 @@
 rootProject.name = 'ac-backup'
 
-include 'backend:config'
-include 'backend:gateway'
 include 'backend:backup-service'
+
+include 'backend:user-service'
+include 'backend:user-client'
+include 'backend:user-model'
+
+include 'backend:storage-service'
+include 'backend:storage-client'
+include 'backend:storage-model'
 
 include 'frontend'
 

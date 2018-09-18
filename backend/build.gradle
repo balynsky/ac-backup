@@ -1,12 +1,23 @@
+plugins {
+    id "net.ltgt.apt" version "0.18"
+}
+
 subprojects {
     version = '1.0'
-    apply plugin: 'java'
 
     repositories {
         mavenCentral()
     }
 
+    apply plugin: 'java'
+    apply plugin: "net.ltgt.apt"
+
     ext {
         bootGradlePlugin = '2.0.3.RELEASE'
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok:1.18.2'
+        apt "org.projectlombok:lombok:1.18.2"
     }
 }

@@ -1,0 +1,6 @@
+server:
+  port: 9080
+
+resource:
+  client: http://localhost:9081
+  storage: http://localhost:9082

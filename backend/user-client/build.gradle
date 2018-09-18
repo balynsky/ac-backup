@@ -1,0 +1,6 @@
+dependencies {
+    compile project (":backend:user-model")
+
+    compile ("org.springframework:spring-context:5.0.7.RELEASE")
+    compile ("org.springframework:spring-web:5.0.7.RELEASE")
+}
