@@ -11,6 +11,12 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-config:${springCloudConfig}"
+    }
+}
+
 bootJar {
     baseName = 'ac-storage'
 }
@@ -19,7 +25,13 @@ dependencies {
     compile project(":backend:storage-model")
 
     compile("com.h2database:h2")
+    compile("org.springframework.retry:spring-retry:${springRetry}")
+
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework.boot:spring-boot-starter-aop")
+
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+
     testCompile("junit:junit")
 }

@@ -10,6 +10,9 @@ include 'backend:storage-service'
 include 'backend:storage-client'
 include 'backend:storage-model'
 
+include 'backend:config-server'
+
 include 'frontend'
 
 include 'infrastructure'
+

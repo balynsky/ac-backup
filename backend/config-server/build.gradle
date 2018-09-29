@@ -17,19 +17,9 @@ dependencyManagement {
     }
 }
 bootJar {
-    baseName = 'ac-backup-service'
+    baseName = 'ac-config-server'
 }
 
 dependencies {
-    compile project(":backend:user-client")
-    compile project(":backend:storage-client")
-
-    compile("org.springframework.retry:spring-retry:${springRetry}")
-
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-aop")
-
-    compile 'org.springframework.cloud:spring-cloud-starter-config'
-
-    testCompile("junit:junit")
+    compile 'org.springframework.cloud:spring-cloud-config-server'
 }

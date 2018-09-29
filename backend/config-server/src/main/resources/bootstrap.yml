@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+        bootstrap: true
+  profiles:
+    include: composite
+  application:
+    name: config-server
