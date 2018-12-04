@@ -23,6 +23,7 @@ bootJar {
 
 dependencies {
     compile project(":backend:storage-model")
+    compile project(":backend:storage-client")
 
     compile("com.h2database:h2")
     compile("org.springframework.retry:spring-retry:${springRetry}")

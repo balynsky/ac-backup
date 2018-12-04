@@ -9,6 +9,7 @@ include 'backend:user-model'
 include 'backend:storage-service'
 include 'backend:storage-client'
 include 'backend:storage-model'
+include 'backend:feign-error-decoder'
 
 include 'backend:config-server'
 

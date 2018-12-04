@@ -23,6 +23,7 @@ bootJar {
 
 dependencies {
     compile project (":backend:user-model")
+    compile project (":backend:user-client")
 
     compile("org.springframework.retry:spring-retry:${springRetry}")
 

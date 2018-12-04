@@ -1,6 +1,10 @@
 dependencies {
-    compile project (":backend:storage-model")
+    compile project(":backend:storage-model")
+    compile project(":backend:feign-error-decoder")
 
-    compile ("org.springframework:spring-context:5.0.7.RELEASE")
-    compile ("org.springframework:spring-web:5.0.7.RELEASE")
+    compile "org.springframework:spring-context:5.0.7.RELEASE"
+    compile "org.springframework:spring-web:5.0.7.RELEASE"
+    compile "org.springframework.cloud:spring-cloud-starter-openfeign:2.0.2.RELEASE"
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.0.2.RELEASE"
+
 }

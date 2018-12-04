@@ -1,6 +1,22 @@
 server:
   port: 9080
 
-resource:
-  client: http://localhost:9081
-  storage: http://localhost:9082
+storage:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9082
+
+user:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9081
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
